@@ -21,10 +21,12 @@ function increaseRankBy(n){
   return deep[deep.length-1]
 }*/
 
+
 function deepestChild() {
-     var childNodeOfDiv=document.getElementById('app').querySelector('div#grand-node');
-     while(childNodeOfDiv.children[0]){
-        childNodeOfDiv = childNodeOfDiv.children[0]
-       }
-       return childNodeOfDiv;
-      }
+  var lis=document.getElementById("grand-node").querySelectorAll("div");
+  var test;
+  for(let i=0;i<lis.length-1;i++) {
+    test=lis[i].querySelector("div");
+  }
+return test;
+}
